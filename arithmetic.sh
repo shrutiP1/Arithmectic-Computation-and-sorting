@@ -1,4 +1,4 @@
-#!/bin/bash -x
+
 echo "welcome "
 
 #UC1
@@ -43,4 +43,24 @@ declare -a array
 for (( i=1 ; i<=4; i++ ))
 do
    array[i]=${resDic[res$i]}
+done
+
+#UC8
+  for (( i=1 ; i<4 ; i++ ))
+do
+   for (( j=1 ; j<5-i-1 ; j++ ))
+   do
+       if [[ ${array[j]} -le ${array[$((j+1))]} ]]
+       then
+             temp=${array[$j]}
+             array[$j]=${array[$((j+1))]}
+             array[$((j+1))]=$temp
+       fi
+    done
+done
+
+echo "Array elements are "
+for (( i=1 ; i<5 ; i++ ))
+do
+     echo ${array[i]}
 done
