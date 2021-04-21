@@ -1,3 +1,4 @@
+#!/bin/bash -x
 echo "welcome "
 
 #UC1
@@ -25,3 +26,13 @@ echo "output of expression is "$res3
 
 res4=$(($a%$b+$c))
 echo "output of expression is "$res4
+
+#UC6
+
+declare -A array
+
+array[res1]=$res1
+array[res2]=$res2
+array[res3]=$res3
+array[res4]=$res4
+
