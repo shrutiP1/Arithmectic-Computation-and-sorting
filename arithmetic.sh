@@ -29,10 +29,11 @@ echo "output of expression is "$res4
 
 #UC6
 
-declare -A array
+declare -A resDic
 
-array[res1]=$res1
-array[res2]=$res2
-array[res3]=$res3
-array[res4]=$res4
+resDic[res1]=$res1
+resDic[res2]=$res2
+resDic[res3]=$res3
+resDic[res4]=$res4
+
 
