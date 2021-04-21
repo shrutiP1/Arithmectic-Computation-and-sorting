@@ -37,3 +37,10 @@ resDic[res3]=$res3
 resDic[res4]=$res4
 
 
+#UC7
+
+declare -a array
+for (( i=1 ; i<=4; i++ ))
+do
+   array[i]=${resDic[res$i]}
+done
