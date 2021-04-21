@@ -48,7 +48,7 @@ done
 #UC8
   for (( i=1 ; i<4 ; i++ ))
 do
-   for (( j=1 ; j<5-i-1 ; j++ ))
+   for (( j=1 ; j<5-i ; j++ ))
    do
        if [[ ${array[j]} -le ${array[$((j+1))]} ]]
        then
