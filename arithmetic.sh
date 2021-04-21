@@ -10,3 +10,8 @@ read -p "enter 3rd value " c
 
 res1=$(($a+$b*$c))
 echo "output of expression is "$res1
+
+#UC3
+
+res2=$(($a*$b+$c))
+echo "output of experssion is "$res2
