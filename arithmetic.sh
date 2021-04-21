@@ -15,3 +15,8 @@ echo "output of expression is "$res1
 
 res2=$(($a*$b+$c))
 echo "output of experssion is "$res2
+
+#UC4
+
+res3=$(awk "BEGIN {print (($c+$a/$b))}")
+echo "output of expression is "$res3
