@@ -19,7 +19,7 @@ echo "output of experssion is "$res2
 
 #UC4
 
-res3=$(awk "BEGIN {print (($c+$a/$b))}")
+res3=$(($c+$a/$b))
 echo "output of expression is "$res3
 
 #UC5
