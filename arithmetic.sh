@@ -19,7 +19,7 @@ echo "output of experssion is "$res2
 
 #UC4
 
-res3=$(awk "BEGIN {print (($c+$a/$b))}")
+res3=$(($c+$a/$b))
 echo "output of expression is "$res3
 
 #UC5
@@ -48,9 +48,29 @@ done
 #UC8
   for (( i=1 ; i<4 ; i++ ))
 do
-   for (( j=1 ; j<5-i-1 ; j++ ))
+   for (( j=1 ; j<5-i ; j++ ))
    do
        if [[ ${array[j]} -le ${array[$((j+1))]} ]]
+       then
+             temp=${array[$j]}
+             array[$j]=${array[$((j+1))]}
+             array[$((j+1))]=$temp
+       fi
+    done
+done
+
+echo "Array elements are "
+for (( i=1 ; i<5 ; i++ ))
+do
+     echo ${array[i]}
+done
+
+#UC9
+ for (( i=1 ; i<4 ; i++ ))
+do
+   for (( j=1 ; j<5-i ; j++ ))
+   do
+        if [[ ${array[j]} -ge ${array[$((j+1))]} ]]
        then
              temp=${array[$j]}
              array[$j]=${array[$((j+1))]}
